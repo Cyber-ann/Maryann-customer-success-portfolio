@@ -262,3 +262,24 @@ footer a:hover { text-decoration: underline; }
 .about-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%}
 @media(max-width:900px){#about .split{grid-template-columns:minmax(0,1fr) minmax(240px,.8fr);column-gap:2rem}#about .split>div:nth-of-type(1){grid-column:1;grid-row:1}#about .prose{grid-column:1;grid-row:2}#about .about-photo-wrap{grid-column:2;grid-row:1/3;position:relative;top:auto;max-width:360px}}
 @media(max-width:620px){#about .split{grid-template-columns:1fr;row-gap:1.2rem}#about .split>div:nth-of-type(1),#about .prose,#about .about-photo-wrap{grid-column:1;grid-row:auto}.about-photo-wrap{width:min(88%,360px);justify-self:start;margin-top:.5rem}}
+
+
+/* Horizontal career journey */
+#journey .sub{max-width:66ch;margin-bottom:3.2rem}
+.career-journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;position:relative;align-items:stretch;padding-top:2.3rem}
+.career-journey::before{content:"";position:absolute;left:2%;right:1.2%;top:.75rem;height:2px;background:linear-gradient(90deg,rgba(91,155,255,.3),var(--blue),var(--sky))}
+.career-journey::after{content:"";position:absolute;right:.2%;top:.34rem;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:12px solid var(--sky)}
+.career-card{position:relative;min-width:0;padding:1.35rem 1.15rem 1.45rem;border:1px solid rgba(145,177,225,.19);border-radius:15px;background:linear-gradient(155deg,rgba(22,47,82,.95),rgba(10,27,51,.98));box-shadow:0 16px 38px rgba(0,0,0,.13)}
+.career-card::before{content:"";position:absolute;top:-2.12rem;left:1.35rem;width:13px;height:13px;border-radius:50%;background:var(--sky);border:3px solid var(--bg2);box-shadow:0 0 16px rgba(91,155,255,.55)}
+.career-card h3{font-size:1.15rem;line-height:1.22;margin:.85rem 0 .45rem;overflow-wrap:anywhere}
+.career-date{display:inline-block;color:var(--sky);font-size:.75rem;font-weight:700;letter-spacing:.045em;line-height:1.45}
+.part-time{color:var(--mint);white-space:nowrap}
+.career-card .org{font-size:.96rem;margin-bottom:1rem}
+.career-points{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+.career-points li{position:relative;padding-left:1rem;color:var(--muted);font-size:.9rem;line-height:1.4;overflow-wrap:anywhere}
+.career-points li::before{content:"";position:absolute;left:0;top:.52em;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+.career-current{border-color:rgba(91,155,255,.55);background:linear-gradient(155deg,rgba(24,57,101,.98),rgba(10,29,57,.99))}
+.career-current::before{background:var(--mint);box-shadow:0 0 18px rgba(131,223,194,.5)}
+.career-note{color:var(--muted);font-size:.88rem;margin-top:1rem}
+@media(max-width:1000px){.career-journey{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:2.8rem}.career-journey::before{top:.75rem}.career-card{min-height:100%}}
+@media(max-width:620px){.career-journey{grid-template-columns:1fr;gap:2rem;padding:0 0 0 1.3rem}.career-journey::before{left:.35rem;right:auto;top:.25rem;bottom:.25rem;width:2px;height:auto;background:linear-gradient(180deg,rgba(91,155,255,.3),var(--blue),var(--sky))}.career-journey::after{display:none}.career-card::before{top:1.35rem;left:-1.67rem}.career-card{padding:1.25rem}.career-card h3{font-size:1.2rem}}
